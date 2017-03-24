@@ -1,0 +1,27 @@
+{
+  "name": "markdown-preview-github-styles",
+  "displayName": "Markdown Preview Github Styling",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "bierner",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.8.0"
+  },
+  "activationEvents": [],
+  "main": "./index.js",
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "markdown.preview": {
+      "styles": [
+        "./base.css", "./node_modules/github-markdown-css/github-markdown.css"
+      ]
+    },
+    "markdownit.plugins": true
+  },
+  "dependencies": {
+    "github-markdown-css": "^2.4.1"
+  }
+}
