@@ -17,3 +17,11 @@ body {
 .markdown-body code {
     color: initial;
 }
+
+.markdown-body pre code {
+    color: initial;
+}
+
+.markdown-body code > div {
+    background: none
+}

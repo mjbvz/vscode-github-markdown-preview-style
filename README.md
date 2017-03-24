@@ -11,3 +11,9 @@ Demonstrates how VSCode's builtin Markdown preview can be extended by other exte
 1. Add the setting `"markdown.enableExperimentalExtensionApi": true` to your workspace.
 
 
+```json
+// Linux
+"terminal.integrated.shellArgs.linux": ["-l"]
+// OS X
+"terminal.integrated.shellArgs.osx": ["-l"]
+```
