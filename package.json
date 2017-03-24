@@ -5,6 +5,12 @@
   "version": "0.0.1",
   "publisher": "bierner",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/mjbvz/vscode-github-markdown-preview-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjbvz/vscode-github-markdown-preview-style/issues"
+  },
   "engines": {
     "vscode": "^1.8.0"
   },
