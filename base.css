@@ -9,3 +9,11 @@ body {
     margin: 0 auto;
     padding: 45px;
 }
+
+.markdown-body blockquote {
+    background-color: initial;
+}
+
+.markdown-body code {
+    color: initial;
+}
