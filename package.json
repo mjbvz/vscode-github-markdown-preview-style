@@ -30,6 +30,7 @@
     "markdownit.plugins": true
   },
   "dependencies": {
-    "github-markdown-css": "^2.4.1"
+    "github-markdown-css": "^2.4.1",
+    "highlight.js": "^9.10.0"
   }
 }
