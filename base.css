@@ -2,7 +2,7 @@ body {
     background: white;
 }
 
-.markdown-body {
+.vscode-body {
     box-sizing: border-box;
     min-width: 200px;
     max-width: 980px;
@@ -10,18 +10,18 @@ body {
     padding: 45px;
 }
 
-.markdown-body blockquote {
+.vscode-body blockquote {
     background-color: initial;
 }
 
-.markdown-body code {
+.vscode-body code {
     color: initial;
 }
 
-.markdown-body pre code {
+.vscode-body pre code {
     color: initial;
 }
 
-.markdown-body code > div {
+.vscode-body code > div {
     background: none
 }
