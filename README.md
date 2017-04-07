@@ -2,7 +2,7 @@
 
 > **⚠️Warning⚠️** This extension depends on an experimental vscode API that is subject to change or removal.
 
-Demonstrates how VSCode's builtin Markdown preview can be extended by other extensions. This extension adds checkbox support to the preview.
+Demonstrates how VSCode's builtin Markdown preview can be extended by other extensions. This extension changes the preview to match Github's style
 
 ## Enabling
 
