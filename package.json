@@ -2,9 +2,10 @@
   "name": "markdown-preview-github-styles",
   "displayName": "Markdown Preview Github Styling",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "bierner",
   "license": "MIT",
+  "preview": true,
   "repository": {
     "url": "https://github.com/mjbvz/vscode-github-markdown-preview-style.git"
   },
@@ -12,7 +13,7 @@
     "url": "https://github.com/mjbvz/vscode-github-markdown-preview-style/issues"
   },
   "engines": {
-    "vscode": "^1.8.0"
+    "vscode": "^1.13.0"
   },
   "activationEvents": [],
   "main": "./index.js",
@@ -20,13 +21,11 @@
     "Other"
   ],
   "contributes": {
-    "markdown.preview": {
-      "styles": [
-        "./base.css",
-        "./github-markdown.css",
-        "./node_modules/highlight.js/styles/github.css"
-      ]
-    }
+    "markdown.previewStyles": [
+      "./base.css",
+      "./github-markdown.css",
+      "./node_modules/highlight.js/styles/github.css"
+    ]
   },
   "dependencies": {
     "github-markdown-css": "^2.4.1",
