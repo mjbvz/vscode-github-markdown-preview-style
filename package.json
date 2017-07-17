@@ -12,21 +12,17 @@
     "url": "https://github.com/mjbvz/vscode-github-markdown-preview-style/issues"
   },
   "engines": {
-    "vscode": "^1.8.0"
+    "vscode": "^1.15.0"
   },
-  "activationEvents": [],
-  "main": "./index.js",
   "categories": [
     "Other"
   ],
   "contributes": {
-    "markdown.preview": {
-      "styles": [
-        "./base.css",
-        "./github-markdown.css",
-        "./node_modules/highlight.js/styles/github.css"
-      ]
-    }
+    "markdown.previewStyles": [
+      "./base.css",
+      "./github-markdown.css",
+      "./node_modules/highlight.js/styles/github.css"
+    ] 
   },
   "dependencies": {
     "github-markdown-css": "^2.4.1",
