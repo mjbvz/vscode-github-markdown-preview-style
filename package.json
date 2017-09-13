@@ -26,8 +26,10 @@
     ] 
   },
   "dependencies": {
-    "github-markdown-css": "^2.4.1",
     "highlight.js": "^9.10.0"
+  },
+  "dev-dependencies": {
+    "github-markdown-css": "^2.4.1"
   },
   "scripts": {
     "build": "node ./build/update-github-markdown-css.js"
