@@ -30,6 +30,6 @@
     "highlight.js": "^9.10.0"
   },
   "scripts": {
-    "update-github-markdown-css": "node ./build/update-github-markdown-css.js"
+    "build": "node ./build/update-github-markdown-css.js"
   }
 }
