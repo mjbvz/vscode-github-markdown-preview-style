@@ -9,4 +9,4 @@ Changes VS Code's built-in markdown preview to match Github's styling
 # Features 
 - Preview what your markdown will look like rendered on Github 
 - Extends VS Code's built-in markdown preview
-- Customize styling using you own [`markdown.styles`](https://code.visualstudio.com/Docs/languages/markdown#_using-your-own-css) css
+- Customize styling using your own [`markdown.styles`](https://code.visualstudio.com/Docs/languages/markdown#_using-your-own-css) css
