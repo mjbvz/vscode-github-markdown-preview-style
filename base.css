@@ -30,3 +30,8 @@ body {
 .vscode-body code > div {
     background: none
 }
+
+.vscode-body table th,
+.vscode-body table td {
+    border: 1px solid #ddd !important;
+}
