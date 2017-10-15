@@ -20,7 +20,7 @@ body {
 }
 
 .vscode-body code {
-    color: initial;
+    color: inherit;
 }
 
 .vscode-body pre code {
