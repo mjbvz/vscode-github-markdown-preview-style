@@ -23,13 +23,13 @@
       "./base.css",
       "./github-markdown.css",
       "./node_modules/highlight.js/styles/github.css"
-    ] 
+    ]
   },
   "dependencies": {
     "highlight.js": "^9.10.0"
   },
-  "dev-dependencies": {
-    "github-markdown-css": "^2.4.1"
+  "devDependencies": {
+    "github-markdown-css": "^2.9.0"
   },
   "scripts": {
     "build": "node ./build/update-github-markdown-css.js"
