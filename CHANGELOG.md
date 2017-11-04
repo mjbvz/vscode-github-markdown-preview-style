@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.1.1 - November 3, 2017
+- Multiroot ready
+
 ## 0.1.0 - October 15, 2017
 - Fix inline code in links. Thanks @francoischalifour!
 - Pulled in more recent version of github styles.
