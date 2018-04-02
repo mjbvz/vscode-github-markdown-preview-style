@@ -2,6 +2,8 @@
 
 ## 0.1.2 - April 2, 2018
 - Override scrollbar styles to always be light
+- Update github styles
+- Update highlight.js
 
 ## 0.1.1 - November 3, 2017
 - Multiroot ready
