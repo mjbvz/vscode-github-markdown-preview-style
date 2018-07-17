@@ -409,7 +409,7 @@
 .vscode-body dl,
 .vscode-body table,
 .vscode-body pre {
-  margin-top: 0;
+  margin-top: 16px;
   margin-bottom: 16px;
 }
 
