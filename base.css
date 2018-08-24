@@ -48,6 +48,17 @@ body {
 	border-left: none;
 }
 
+.vscode-body p,
+.vscode-body blockquote,
+.vscode-body ul,
+.vscode-body ol,
+.vscode-body dl,
+.vscode-body table,
+.vscode-body pre {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
 body.vscode-body::-webkit-scrollbar {
     background-color: white;
 }
