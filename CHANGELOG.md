@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.1.3 - August 24, 2018
+- Tweak margin on block elements. Thanks @cilerler!
+
 ## 0.1.2 - April 2, 2018
 - Override scrollbar styles to always be light
 - Update github styles
