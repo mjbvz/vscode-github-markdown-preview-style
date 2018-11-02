@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.4 - November 2, 2018
+- Fix width of content. 
+- Update logo.
+
 ## 0.1.3 - August 24, 2018
 - Tweak margin on block elements. Thanks @cilerler!
 
