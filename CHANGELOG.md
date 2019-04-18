@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.1.5 - April 18, 2019
+- Set explicit `extensionKind` for VS Code compatability.
+
 ## 0.1.4 - November 2, 2018
 - Fix width of content. 
 - Update logo.
