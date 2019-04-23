@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.1.6 - April 23, 2019
+- Unset explicit `extensionKind`. No longer required
+
 ## 0.1.5 - April 18, 2019
 - Set explicit `extensionKind` for VS Code compatability.
 
