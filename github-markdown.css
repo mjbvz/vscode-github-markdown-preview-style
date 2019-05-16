@@ -10,7 +10,7 @@
   line-height: 1.5;
   color: #24292e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
+  /* font-size: 16px; */   /* let's inherit `markdown.preview.fontSize` */
   line-height: 1.5;
   word-wrap: break-word;
 }
