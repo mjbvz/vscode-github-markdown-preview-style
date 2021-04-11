@@ -36,7 +36,7 @@
     "highlight.js": "^9.13.1"
   },
   "devDependencies": {
-    "github-markdown-css": "^2.10.0"
+    "github-markdown-css": "^4.0.0"
   },
   "scripts": {
     "build": "node ./build/update-github-markdown-css.js"
