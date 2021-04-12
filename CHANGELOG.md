@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.0 — April 12, 2021
+- Pick up new GitHub styles version
+- Pick up new highlight.js version
+
 ## 0.1.6 - April 23, 2019
 - Unset explicit `extensionKind`. No longer required
 
