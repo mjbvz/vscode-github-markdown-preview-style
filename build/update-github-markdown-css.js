@@ -20,7 +20,7 @@ do {
     markdownCssVariablesMatch = markdownCssVariablesRegex.exec(markdownCssInput);
     if (markdownCssVariablesMatch) {
         let markdownCssVariableStyle = markdownCssVariablesMatch[2]
-            .replace(/^  /g, '')
+            .replace(/^  /gm, '')
             .replace(
                 '.markdown-system',
                 `.markdown-${markdownCssVariablesMatch[1]},\n`
