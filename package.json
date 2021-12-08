@@ -26,7 +26,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onLanguage:markdown",
+    "onWebviewPanel:markdown.preview",
+    "onCustomEditor:vscode.markdown.preview.editor"
   ],
   "main": "dist/extension.js",
   "browser": "dist/extension.js",

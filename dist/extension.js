@@ -12,9 +12,11 @@ const THEME_CONFIGURATION_VALUES = {
 }
 const THEME_CONFIGURATION_AUTO = 'auto';
 
-const settings = vscode.workspace.getConfiguration(THEME_CONFIGURATION_ID, null);
+let settings = vscode.workspace.getConfiguration(THEME_CONFIGURATION_ID, null);
 
-let colorMode = validThemeConfigurationValue(settings.get(THEME_CONFIGURATION_KEY));
+function getColorMode() {
+    return validThemeConfigurationValue(settings.get(THEME_CONFIGURATION_KEY))
+}
 
 function validThemeConfigurationValue(theme) {
     return !THEME_CONFIGURATION_VALUES[theme]
@@ -25,21 +27,7 @@ function validThemeConfigurationValue(theme) {
 exports.activate = function() {
     vscode.workspace.onDidChangeConfiguration(function(e) {
         if (e.affectsConfiguration(`${THEME_CONFIGURATION_ID}.${THEME_CONFIGURATION_KEY}`)) {
-            colorMode = validThemeConfigurationValue(settings.get(THEME_CONFIGURATION_KEY));
-            if (colorMode === THEME_CONFIGURATION_AUTO) {
-                switch (vscode.window.activeColorTheme.kind) {
-                    case vscode.ColorThemeKind.Dark:
-                        colorMode = "dark";
-                        break;
-                    case vscode.ColorThemeKind.Light:
-                        colorMode = "light";
-                        break;
-                    case vscode.ColorThemeKind.HighContrast:
-                        colorMode = "high-contrast";
-                        break;
-                }
-                colorMode = validThemeConfigurationValue(colorMode);
-            }
+            settings = vscode.workspace.getConfiguration(THEME_CONFIGURATION_ID, null);
         }
     });
 
@@ -53,7 +41,7 @@ exports.activate = function() {
 exports.plugin = function(md) {
     const render = md.renderer.render;
     md.renderer.render = function() {
-        return `<div class="markdown-body markdown-${colorMode}">\n${render.apply(md.renderer, arguments)}\n</div>`;
+        return `<div class="markdown-body markdown-${getColorMode()}">\n${render.apply(md.renderer, arguments)}\n</div>`;
     };
     return md;
 }
