@@ -22,8 +22,8 @@ do {
         let markdownCssVariableStyle = markdownCssVariablesMatch[2]
             .replace(/^  /gm, '')
             .replace(
-                '.markdown-system',
-                `.markdown-${markdownCssVariablesMatch[1]},\n`
+                '.markdown-body.markdown-system',
+                `.markdown-body.markdown-${markdownCssVariablesMatch[1]},\n`
                 + `.vscode-body.vscode-${markdownCssVariablesMatch[1]} .markdown-body.markdown-auto`
             );
         markdownCssOutput = `${markdownCssVariableStyle.trim()}\n\n${markdownCssOutput}`;

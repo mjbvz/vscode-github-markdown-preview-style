@@ -1,6 +1,4 @@
 html, body {
-    background-color: var(--color-canvas-default);
-    color: var(--color-fg-default);
     padding: 0;
 }
 
@@ -9,6 +7,8 @@ html, body {
 }
 
 .markdown-body {
+    background-color: var(--color-canvas-default);
+    color: var(--color-fg-default);
     padding: 32px !important;
 }
 
@@ -18,11 +18,18 @@ html, body {
     margin: 0 auto;
     max-width: auto !important;
     min-width: 200px !important;
-    padding: 40px;
     width: 100% !important;
 }
 
-.vscode-body.scrollBeyondLastLine .markdown-body {
+.vscode-body > .markdown-body {
+    padding: 0 !important;
+}
+
+.vscode-body > .markdown-body > .markdown-body {
+    padding: 32px !important;
+}
+
+.vscode-body.scrollBeyondLastLine > .markdown-body > .markdown-body {
     padding-bottom: calc(100vh + 10px) !important;
 }
 
