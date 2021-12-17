@@ -45,6 +45,7 @@
         "properties": {
           "markdown-preview-github-styles.colorMode": {
             "type": "string",
+            "description": "Color mode for the styling of the Markdown preview.",
             "enum": [
               "auto",
               "system",
