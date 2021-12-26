@@ -4,9 +4,6 @@
   Author: github.com
   Maintainer: @SNDST00M, @mjbvz
   Updated: 2021-12-08
-
-  Outdated base version: https://github.com/primer/github-syntax-dark
-  Current colors taken from GitHub's CSS
 */
 .markdown-body pre code.hljs {
   display: block;
@@ -19,8 +16,8 @@
 }
 
 /*!
-  Theme: GitHub Light
-  Description: Dark theme as seen on github.com
+  Theme: GitHub
+  Description: Theme as seen on github.com
   Author: github.com
   Maintainer: @Hirse
   Updated: 2021-05-15
