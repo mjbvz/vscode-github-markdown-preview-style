@@ -1,5 +1,8 @@
-html, body {
-    padding: 0;
+html,
+body,
+.markdown-body {
+    padding: 0 !important;
+    max-width: auto !important;
 }
 
 .vscode-body.scrollBeyondLastLine {
@@ -19,10 +22,6 @@ html, body {
     max-width: auto !important;
     min-width: 200px !important;
     width: 100% !important;
-}
-
-.vscode-body > .markdown-body {
-    padding: 0 !important;
 }
 
 .vscode-body > .markdown-body > .markdown-body {
