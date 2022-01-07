@@ -11,9 +11,8 @@ const THEME_CONFIGURATION_VALUES = {
 }
 const THEME_CONFIGURATION_AUTO = 'auto';
 
-let settings = vscode.workspace.getConfiguration(THEME_CONFIGURATION_ID, null);
-
 function getColorTheme() {
+    const settings = vscode.workspace.getConfiguration(THEME_CONFIGURATION_ID, null);
     return validThemeConfigurationValue(settings.get(THEME_CONFIGURATION_KEY))
 }
 
@@ -24,12 +23,6 @@ function validThemeConfigurationValue(theme) {
 }
 
 exports.activate = function() {
-    vscode.workspace.onDidChangeConfiguration(function(e) {
-        if (e.affectsConfiguration(`${THEME_CONFIGURATION_ID}.${THEME_CONFIGURATION_KEY}`)) {
-            settings = vscode.workspace.getConfiguration(THEME_CONFIGURATION_ID, null);
-        }
-    });
-
     return {
         extendMarkdownIt(md) {
             return md.use(plugin);
