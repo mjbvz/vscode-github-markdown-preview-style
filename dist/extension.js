@@ -13,7 +13,7 @@ const THEME_CONFIGURATION_AUTO = 'auto';
 
 let settings = vscode.workspace.getConfiguration(THEME_CONFIGURATION_ID, null);
 
-function getColorMode() {
+function getColorTheme() {
     return validThemeConfigurationValue(settings.get(THEME_CONFIGURATION_KEY))
 }
 
@@ -32,15 +32,15 @@ exports.activate = function() {
 
     return {
         extendMarkdownIt(md) {
-            return md.use(exports.plugin);
+            return md.use(plugin);
         }
     };
 }
 
-exports.plugin = function(md) {
+function plugin(md) {
     const render = md.renderer.render;
     md.renderer.render = function() {
-        return `<div class="markdown-body markdown-${getColorMode()}">\n${render.apply(md.renderer, arguments)}\n</div>`;
+        return `<div class="markdown-body markdown-${getColorTheme()}">\n${render.apply(md.renderer, arguments)}\n</div>`;
     };
     return md;
 }

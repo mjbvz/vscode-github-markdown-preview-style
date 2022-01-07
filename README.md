@@ -21,8 +21,8 @@ for instructions on how to use this extension.
 
 This theme is configurable in a similar manner to GitHub's appearance settings.
 
-- `markdown-preview-github-styles.colorMode`
-   Sets the color mode for the Markdown preview. Default: `auto`.
+- `markdown-preview-github-styles.colorTheme`
+   Sets the color theme for the Markdown preview. Default: `auto`.
    - `auto`: Automatically match the editor color theme.
    - `system`: Sync to the system/OS color theme.
    - `light`: Always use the GitHub site's light theme.
