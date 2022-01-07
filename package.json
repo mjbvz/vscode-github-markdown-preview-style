@@ -20,25 +20,50 @@
     "url": "https://github.com/mjbvz/vscode-github-markdown-preview-style/issues"
   },
   "engines": {
-    "vscode": "^1.15.0"
+    "vscode": "^1.41.0"
   },
   "categories": [
     "Other"
   ],
+  "main": "dist/extension.js",
+  "browser": "dist/extension.js",
   "contributes": {
+    "markdown.markdownItPlugins": true,
     "markdown.previewStyles": [
-      "./base.css",
-      "./github-markdown.css",
-      "./node_modules/highlight.js/styles/github.css"
+      "./dist/base.css",
+      "./dist/github-markdown.css",
+      "./dist/highlight-js.css"
+    ],
+    "configuration": [
+      {
+        "title": "Markdown Preview Github Styling",
+        "properties": {
+          "markdown-preview-github-styles.colorTheme": {
+            "type": "string",
+            "description": "Color theme for the styling of the Markdown preview.",
+            "enum": [
+              "auto",
+              "system",
+              "light",
+              "dark"
+            ],
+            "enumDescriptions": [
+              "Automatically match the editor color theme.",
+              "Sync to the system/OS color theme.",
+              "Always use the Github site's light theme.",
+              "Always use the Github site's dark theme."
+            ],
+            "default": "auto"
+          }
+        }
+      }
     ]
   },
-  "dependencies": {
-    "highlight.js": "^10.7.2"
-  },
   "devDependencies": {
-    "github-markdown-css": "^4.0.0"
+    "github-markdown-css": "^5.0.0"
   },
   "scripts": {
+    "vscode:prepublish": "npm run build",
     "build": "node ./build/update-github-markdown-css.js"
   }
 }

@@ -1,0 +1,68 @@
+html,
+body,
+.markdown-body {
+    padding: 0 !important;
+    max-width: auto !important;
+}
+
+.vscode-body.scrollBeyondLastLine {
+    margin-bottom: 0;
+}
+
+.markdown-body {
+    background-color: var(--color-canvas-default);
+    color: var(--color-fg-default);
+    padding: 32px !important;
+}
+
+.markdown-body {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: auto !important;
+    min-width: 200px !important;
+    width: 100% !important;
+}
+
+.vscode-body > .markdown-body > .markdown-body {
+    padding: 32px !important;
+}
+
+.vscode-body.scrollBeyondLastLine > .markdown-body > .markdown-body {
+    padding-bottom: calc(100vh + 10px) !important;
+}
+
+.markdown-body blockquote {
+    background-color: initial;
+}
+
+.markdown-body pre {
+    color: initial;
+}
+
+.markdown-body code {
+    color: inherit;
+}
+
+.markdown-body pre code {
+    color: initial;
+}
+
+.markdown-body code > div {
+    background: none
+}
+
+.markdown-body.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
