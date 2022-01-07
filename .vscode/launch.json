@@ -1,4 +1,3 @@
-// A launch configuration that compiles the extension and then opens it inside a new window
 {
     "version": "0.2.0",
     "configurations": [
@@ -10,7 +9,7 @@
             "args": ["--extensionDevelopmentPath=${workspaceRoot}" ],
             "stopOnEntry": false,
             "sourceMaps": true,
-            "preLaunchTask": "npm"
+            "preLaunchTask": "build"
         }
     ]
 }

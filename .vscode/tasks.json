@@ -4,8 +4,9 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "build",	
 			"type": "npm",
-			"script": "compile",
+			"script": "build",
 			"problemMatcher": "$tsc-watch",
 			"isBackground": true,
 			"presentation": {
