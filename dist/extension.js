@@ -1,14 +1,13 @@
 const vscode = require('vscode');
 
 const THEME_CONFIGURATION_ID = 'markdown-preview-github-styles';
-const THEME_CONFIGURATION_KEY = 'colorMode';
+const THEME_CONFIGURATION_KEY = 'colorTheme';
 
 const THEME_CONFIGURATION_VALUES = {
     'auto': true,
     'system': true,
     'light': true,
-    'dark': true,
-    'high-contrast': true
+    'dark': true
 }
 const THEME_CONFIGURATION_AUTO = 'auto';
 

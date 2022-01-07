@@ -1,6 +1,6 @@
 {
   "name": "markdown-preview-github-styles",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "displayName": "Markdown Preview Github Styling",
   "description": "Changes VS Code's built-in markdown preview to match Github's style",
   "keywords": [
@@ -25,11 +25,6 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onLanguage:markdown",
-    "onWebviewPanel:markdown.preview",
-    "onCustomEditor:vscode.markdown.preview.editor"
-  ],
   "main": "dist/extension.js",
   "browser": "dist/extension.js",
   "contributes": {
@@ -43,9 +38,9 @@
       {
         "title": "Markdown Preview Github Styling",
         "properties": {
-          "markdown-preview-github-styles.colorMode": {
+          "markdown-preview-github-styles.colorTheme": {
             "type": "string",
-            "description": "Color mode for the styling of the Markdown preview.",
+            "description": "Color theme for the styling of the Markdown preview.",
             "enum": [
               "auto",
               "system",
@@ -65,7 +60,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.20.0",
     "github-markdown-css": "^5.0.0"
   },
   "scripts": {
