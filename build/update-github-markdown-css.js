@@ -18,19 +18,16 @@ const markdownCssInput = fs.readFileSync(markdownCssAbsolutePath, 'utf8').trim()
 let markdownCssOutput = markdownCssInput;
 
 let markdownCssVariablesMatch;
-do {
-    markdownCssVariablesMatch = markdownCssVariablesRegex.exec(markdownCssInput);
-    if (markdownCssVariablesMatch) {
-        let markdownCssVariableStyle = markdownCssVariablesMatch[2]
-            .replace(/^  /gm, '')
-            .replace(
-                '.github-markdown-system',
-                `.github-markdown-${markdownCssVariablesMatch[1]},\n`
-                + `.vscode-body.vscode-${markdownCssVariablesMatch[1]} .github-markdown-auto`
-            );
-        markdownCssOutput = `${markdownCssVariableStyle.trim()}\n\n${markdownCssOutput}`;
-    }
-} while (markdownCssVariablesMatch);
+while ((markdownCssVariablesMatch = markdownCssVariablesRegex.exec(markdownCssInput))) {
+    const markdownCssVariableStyle = markdownCssVariablesMatch[2]
+        .replace(/^  /gm, '')
+        .replace(
+            '.github-markdown-system',
+            `.github-markdown-${markdownCssVariablesMatch[1]},\n`
+            + `.vscode-body.vscode-${markdownCssVariablesMatch[1]} .github-markdown-auto`
+        );
+    markdownCssOutput = `${markdownCssVariableStyle.trim()}\n\n${markdownCssOutput}`;
+}
 
 markdownCssOutput = markdownCssHeader + '\n\n' + markdownCssOutput;
 
