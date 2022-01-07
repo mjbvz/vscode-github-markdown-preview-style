@@ -27,6 +27,7 @@
   ],
   "main": "dist/extension.js",
   "browser": "dist/extension.js",
+  "activationEvents": [],
   "contributes": {
     "markdown.markdownItPlugins": true,
     "markdown.previewStyles": [
