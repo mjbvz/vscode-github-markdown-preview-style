@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.0 — April 12, 2021
+- Add support for dark Github theme. Thanks SNDST00M!
+    - By default, the theme is selected based on the current editor theme but this can be configured.
+
 ## 0.2.0 — April 12, 2021
 - Pick up new GitHub styles version
 - Pick up new highlight.js version
