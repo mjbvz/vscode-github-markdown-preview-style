@@ -1,3 +1,5 @@
+// @ts-check
+
 const vscode = require('vscode');
 
 const THEME_CONFIGURATION_ID = 'markdown-preview-github-styles';
@@ -22,7 +24,13 @@ function validThemeConfigurationValue(theme) {
         : theme;
 }
 
-exports.activate = function() {
+exports.activate = function(/** @type {vscode.ExtensionContext} */ctx) {
+    ctx.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e  => {
+        if (e.affectsConfiguration(THEME_CONFIGURATION_ID)) {
+            vscode.commands.executeCommand('markdown.preview.refresh');
+        }
+    }));
+
     return {
         extendMarkdownIt(md) {
             return md.use(plugin);
