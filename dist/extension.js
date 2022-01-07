@@ -2,31 +2,31 @@
 
 const vscode = require('vscode');
 
-const THEME_CONFIGURATION_ID = 'markdown-preview-github-styles';
-const THEME_CONFIGURATION_KEY = 'colorTheme';
+const themeConfigSection = 'markdown-preview-github-styles';
+const themeConfigKey = 'colorTheme';
 
-const THEME_CONFIGURATION_VALUES = {
+const themeConfigValues = {
     'auto': true,
     'system': true,
     'light': true,
     'dark': true
 }
-const THEME_CONFIGURATION_AUTO = 'auto';
+const defaultThemeConfiguration = 'auto';
 
 function getColorTheme() {
-    const settings = vscode.workspace.getConfiguration(THEME_CONFIGURATION_ID, null);
-    return validThemeConfigurationValue(settings.get(THEME_CONFIGURATION_KEY))
+    const settings = vscode.workspace.getConfiguration(themeConfigSection, null);
+    return validThemeConfigurationValue(settings.get(themeConfigKey))
 }
 
 function validThemeConfigurationValue(theme) {
-    return !THEME_CONFIGURATION_VALUES[theme]
-        ? THEME_CONFIGURATION_AUTO
+    return !themeConfigValues[theme]
+        ? defaultThemeConfiguration
         : theme;
 }
 
 exports.activate = function(/** @type {vscode.ExtensionContext} */ctx) {
     ctx.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e  => {
-        if (e.affectsConfiguration(THEME_CONFIGURATION_ID)) {
+        if (e.affectsConfiguration(themeConfigSection)) {
             vscode.commands.executeCommand('markdown.preview.refresh');
         }
     }));
@@ -41,7 +41,9 @@ exports.activate = function(/** @type {vscode.ExtensionContext} */ctx) {
 function plugin(md) {
     const render = md.renderer.render;
     md.renderer.render = function() {
-        return `<div class="markdown-body markdown-${getColorTheme()}">\n${render.apply(md.renderer, arguments)}\n</div>`;
+        return `<div class="markdown-body markdown-${getColorTheme()}">
+            <div class="github-markdown-content">${render.apply(md.renderer, arguments)}</div>
+        </div>`;
     };
     return md;
 }
