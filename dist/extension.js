@@ -41,7 +41,7 @@ exports.activate = function(/** @type {vscode.ExtensionContext} */ctx) {
 function plugin(md) {
     const render = md.renderer.render;
     md.renderer.render = function() {
-        return `<div class="markdown-body markdown-${getColorTheme()}">
+        return `<div class="github-markdown-body github-markdown-${getColorTheme()}">
             <div class="github-markdown-content">${render.apply(md.renderer, arguments)}</div>
         </div>`;
     };

@@ -9,10 +9,12 @@ const markdownCssVariableSelectorRegex = /(?<=@media *\(prefers-color-scheme: *(
 const markdownCssRelativePath = path.join('node_modules', 'github-markdown-css', 'github-markdown.css');
 const markdownCssAbsolutePath = path.resolve(__dirname, '..', markdownCssRelativePath);
 
-let markdownCssHeader = `/* Generated from '${markdownCssRelativePath}' */`;
+const markdownCssHeader = `/* Generated from '${markdownCssRelativePath}' */`;
 
-let markdownCssInput = fs.readFileSync(markdownCssAbsolutePath, 'utf8').trim()
-    .replace(markdownCssVariableSelectorRegex, '.markdown-body.markdown-system');
+const markdownCssInput = fs.readFileSync(markdownCssAbsolutePath, 'utf8').trim()
+    .replace(/\.markdown-body/g, '.github-markdown-body')
+    .replace(markdownCssVariableSelectorRegex, '.github-markdown-system');
+
 let markdownCssOutput = markdownCssInput;
 
 let markdownCssVariablesMatch;
@@ -22,13 +24,13 @@ do {
         let markdownCssVariableStyle = markdownCssVariablesMatch[2]
             .replace(/^  /gm, '')
             .replace(
-                '.markdown-body.markdown-system',
-                `.markdown-body.markdown-${markdownCssVariablesMatch[1]},\n`
-                + `.vscode-body.vscode-${markdownCssVariablesMatch[1]} .markdown-body.markdown-auto`
+                '.github-markdown-system',
+                `.github-markdown-${markdownCssVariablesMatch[1]},\n`
+                + `.vscode-body.vscode-${markdownCssVariablesMatch[1]} .github-markdown-auto`
             );
         markdownCssOutput = `${markdownCssVariableStyle.trim()}\n\n${markdownCssOutput}`;
     }
-} while(markdownCssVariablesMatch)
+} while (markdownCssVariablesMatch);
 
 markdownCssOutput = markdownCssHeader + '\n\n' + markdownCssOutput;
 
