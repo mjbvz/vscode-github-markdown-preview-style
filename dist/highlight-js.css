@@ -30,13 +30,13 @@
   background: var(--color-canvas-subtle);
 }
 
-.markdown-body .markdown-body .hljs-doctag,
-.markdown-body .markdown-body .hljs-keyword,
-.markdown-body .markdown-body .hljs-meta .markdown-body .hljs-keyword,
-.markdown-body .markdown-body .hljs-template-tag,
-.markdown-body .markdown-body .hljs-template-variable,
-.markdown-body .markdown-body .hljs-type,
-.markdown-body .markdown-body .hljs-variable.language_ {
+.markdown-body .hljs-doctag,
+.markdown-body .hljs-keyword,
+.markdown-body .hljs-meta .hljs-keyword,
+.markdown-body .hljs-template-tag,
+.markdown-body .hljs-template-variable,
+.markdown-body .hljs-type,
+.markdown-body .hljs-variable.language_ {
   color: var(--color-prettylights-syntax-keyword);
 }
 
@@ -57,10 +57,10 @@
 .markdown-body .hljs-selector-class,
 .markdown-body .hljs-selector-id,
 .markdown-body .hljs-variable {
-  color: var(--color-prettylights-syntax-string);
+  color: var(--color-prettylights-syntax-constant);
 }
 
-.markdown-body .hljs-meta .markdown-body .hljs-string,
+.markdown-body .hljs-meta .hljs-string,
 .markdown-body .hljs-regexp,
 .markdown-body .hljs-string {
   color: var(--color-prettylights-syntax-string);
