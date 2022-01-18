@@ -1,6 +1,9 @@
 # Change Log
 
-## 1.0.0 — April 12, 2021
+## 1.0.1 — January 18, 2021
+- Fix code syntax colors. Thanks SNDST00M!
+
+## 1.0.0 — January 12, 2021
 - Add support for dark Github theme. Thanks SNDST00M!
     - By default, the theme is selected based on the current editor theme but this can be configured.
 
