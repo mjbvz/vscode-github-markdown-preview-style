@@ -66,3 +66,7 @@ body,
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+    border-left: 3px solid var(--color-fg-default);
+}
