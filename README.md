@@ -1,5 +1,3 @@
-[![](https://vsmarketplacebadge.apphb.com/version/bierner.markdown-preview-github-styles.svg)](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
-i
 Changes VS Code's built-in markdown preview to match GitHub's styling.
 
 ![](https://github.com/mjbvz/vscode-github-markdown-preview-style/raw/master/docs/example.png)
@@ -12,7 +10,7 @@ Includes support for both light and dark GitHub themes. By default, the theme ty
 
 - Preview what your markdown will look like on GitHub.
 - Extends VS Code's built-in markdown preview.
-- Includes Github's Dark and Light themes, along with Github's high contrast and color blind accessible themes.
+- Includes Github's Dark and Light themes, along with Github's dark dimmed, high contrast, and color blind accessible themes.
 - Customize styling using your own [`markdown.styles`](https://code.visualstudio.com/Docs/languages/markdown#_using-your-own-css) css
   - Make sure you apply your styles to the `.github-markdown-body` instead of just `body` so they don't get overridden by this extension
 

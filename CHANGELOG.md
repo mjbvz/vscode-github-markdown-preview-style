@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.0.0 — January 18, 2023
+- Add additional color themes, including dark dimmed, high contract, and color blind accessible dark and light themes. Thanks @jjspace!
+
 ## 1.0.1 — January 18, 2022
 - Fix code syntax colors. Thanks SNDST00M!
 
