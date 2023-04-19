@@ -26,8 +26,8 @@
     "Other"
   ],
   "type": "module",
-  "main": "dist/extension.cjs",
-  "browser": "dist/extension.cjs",
+  "main": "dist/extension.js",
+  "browser": "dist/extension.js",
   "activationEvents": [],
   "contributes": {
     "markdown.markdownItPlugins": true,
