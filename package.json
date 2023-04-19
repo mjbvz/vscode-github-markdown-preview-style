@@ -25,7 +25,6 @@
   "categories": [
     "Other"
   ],
-  "type": "module",
   "main": "dist/extension.js",
   "browser": "dist/extension.js",
   "activationEvents": [],
