@@ -1,6 +1,9 @@
 # Change Log
 
-## 2.0.0 — January 18, 2023
+## 2.0.1 — April 19, 2023
+- Fix extension on web.
+
+## 2.0.0 — April 17, 2023
 - Add additional color themes, including dark dimmed, high contract, and color blind accessible dark and light themes. Thanks @jjspace!
 
 ## 1.0.1 — January 18, 2022
