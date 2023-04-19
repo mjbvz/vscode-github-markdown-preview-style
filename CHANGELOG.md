@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.0.2 — April 19, 2023
+- Fix loading of main extension script
+
 ## 2.0.1 — April 19, 2023
 - Fix extension on web.
 
