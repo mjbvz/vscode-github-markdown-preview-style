@@ -38,6 +38,7 @@ body,
 
 .github-markdown-body pre {
     color: initial;
+    border: none;
 }
 
 .github-markdown-body code {
