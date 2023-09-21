@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.0.3 — September 21, 2023
+- Remove borders on codeblocks. Thanks @jjspace!
+
 ## 2.0.2 — April 19, 2023
 - Fix loading of main extension script
 
