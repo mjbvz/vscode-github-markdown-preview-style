@@ -25,9 +25,15 @@
   Outdated base version: https://github.com/primer/github-syntax-dark
   Current colors taken from GitHub's CSS
 */
-.markdown-body .hljs {
+.markdown-body .hljs,
+.markdown-body pre > code {
   color: var(--color-fg-default);
   background: var(--color-canvas-subtle);
+}
+
+.markdown-body .hljs-function,
+.markdown-body .hljs-params {
+  color: var(--color-fg-default);
 }
 
 .markdown-body .hljs-doctag,
