@@ -133,7 +133,7 @@
     ]
   },
   "devDependencies": {
-    "generate-github-markdown-css": "^5.1.0"
+    "generate-github-markdown-css": "^6.2.0"
   },
   "scripts": {
     "vscode:prepublish": "npm run build",
