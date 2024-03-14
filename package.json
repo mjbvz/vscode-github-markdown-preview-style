@@ -133,6 +133,7 @@
     ]
   },
   "devDependencies": {
+    "@types/markdown-it": "^13.0.7",
     "generate-github-markdown-css": "^6.2.0"
   },
   "scripts": {

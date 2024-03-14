@@ -9,6 +9,7 @@ const defaultLightTheme = 'light';
 const darkThemeKey = 'darkTheme';
 const defaultDarkTheme = 'dark';
 
+/** @type {Record<string, boolean>} */
 const themeConfigValues = {
     'auto': true,
     'system': true,
@@ -33,8 +34,8 @@ function getThemeMode() {
     return validThemeModeValue(settings.get(themeConfigKey))
 }
 
-function validThemeModeValue(theme) {
-    return !themeConfigValues[theme]
+function validThemeModeValue(/** @type {string | undefined} */ theme) {
+    return !theme || !themeConfigValues[theme]
         ? defaultThemeConfiguration
         : theme;
 }
@@ -56,30 +57,30 @@ function getDarkTheme() {
 }
 
 
-exports.activate = function(/** @type {vscode.ExtensionContext} */ctx) {
-    ctx.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e  => {
+exports.activate = function (/** @type {vscode.ExtensionContext} */ctx) {
+    ctx.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e => {
         if (e.affectsConfiguration(themeConfigSection)) {
             vscode.commands.executeCommand('markdown.preview.refresh');
         }
     }));
 
     return {
-        extendMarkdownIt(md) {
+        extendMarkdownIt(/** @type {import('markdown-it')} */ md) {
             return md.use(plugin);
         }
     };
 }
 
-function plugin(md) {
+function plugin(/** @type {import('markdown-it')} */ md) {
     const render = md.renderer.render;
-    md.renderer.render = function() {
+    md.renderer.render = (...args) => {
         return `<div
             class="github-markdown-body"
             data-color-mode="${getThemeMode()}"
             data-light-theme="${getLightTheme()}"
             data-dark-theme="${getDarkTheme()}"
         >
-            <div class="github-markdown-content">${render.apply(md.renderer, arguments)}</div>
+            <div class="github-markdown-content">${render.apply(md.renderer, args)}</div>
         </div>`;
     };
     return md;
