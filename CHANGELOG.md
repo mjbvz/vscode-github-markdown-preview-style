@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.0.4 — March 14, 2024
+- Fix default code text color. Thanks @jjspace!
+
 ## 2.0.3 — September 21, 2023
 - Remove borders on codeblocks. Thanks @jjspace!
 
