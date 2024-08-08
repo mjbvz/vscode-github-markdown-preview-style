@@ -29,7 +29,7 @@ By default, this extension uses the Github theme that matches VS Code's color th
    - `Auto (match editor)`: Automatically match the editor color theme (light/dark).
    - `System`: Sync to the system/OS color theme.
    - `Single theme: Light`: Always use the selected Light theme. See `markdown-preview-github-styles.lightTheme`
-   - `Single theme: Dar`: Always use the selected Dark theme. See `markdown-preview-github-styles.darkTheme`
+   - `Single theme: Dark`: Always use the selected Dark theme. See `markdown-preview-github-styles.darkTheme`
 
 - `markdown-preview-github-styles.lightTheme` and `markdown-preview-github-styles.darkTheme`.
 
