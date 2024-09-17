@@ -6,6 +6,10 @@ import githubMarkdownCss from "generate-github-markdown-css";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+/**
+ * @param {string} filename
+ * @param {string} content
+ */
 async function saveStyles(filename, content) {
     return fs.writeFile(path.join(__dirname, '../dist', filename), content, (err) => {
         if (err) {
@@ -14,6 +18,9 @@ async function saveStyles(filename, content) {
     });
 }
 
+/**
+ * @param {string} themeName
+ */
 async function generateStyles(themeName) {
     const varStylesheet = await githubMarkdownCss({
         light: themeName,
