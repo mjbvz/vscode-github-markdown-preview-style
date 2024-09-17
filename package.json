@@ -1,6 +1,6 @@
 {
   "name": "markdown-preview-github-styles",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "displayName": "Markdown Preview Github Styling",
   "description": "Changes VS Code's built-in markdown preview to match Github's style",
   "keywords": [
@@ -134,6 +134,7 @@
   },
   "devDependencies": {
     "@types/markdown-it": "^13.0.7",
+    "@types/node": "^22.5.5",
     "generate-github-markdown-css": "^6.3.0"
   },
   "scripts": {

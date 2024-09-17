@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.1.0 — September 17, 2024
+- Pick up `generate-github-markdown-css` 6.3.0. Thanks @jjspace!
+
 ## 2.0.4 — March 14, 2024
 - Fix default code text color. Thanks @jjspace!
 
