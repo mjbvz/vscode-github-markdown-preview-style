@@ -4,7 +4,8 @@ Changes VS Code's built-in markdown preview to match GitHub's styling.
 
 Includes support for both light and dark GitHub themes. By default, the theme type (light vs dark) is selected based on your VS Code theme.
 
-> **❗️ Important**: This extension only styles the Markdown preview. Use [this extension pack](https://marketplace.visualstudio.com/items?itemName=bierner.github-markdown-preview) to add support for other GitHub markdown features like `:emoji:` and `- [ ] tasklists`.
+> [!IMPORTANT]  
+> This extension only styles the Markdown preview. Use [this extension pack](https://marketplace.visualstudio.com/items?itemName=bierner.github-markdown-preview) to add support for other GitHub markdown features like `:emoji:` and `- [ ] tasklists`.
 
 # Features
 
