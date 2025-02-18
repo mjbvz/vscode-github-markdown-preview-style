@@ -28,7 +28,11 @@ body,
 .vscode-body.scrollBeyondLastLine {
     margin-bottom: 0;
 }
-.vscode-body.scrollBeyondLastLine .github-markdown-body {
+/*
+ * Other extensions may reuse the markdown render function for embedding additional documents
+ * creating multiple .github-markdown-body elements so this should only apply to the top one
+ */
+.vscode-body.scrollBeyondLastLine > .markdown-body > .github-markdown-body {
     padding-bottom: calc(100vh + 10px) !important;
 }
 
