@@ -1,5 +1,9 @@
 # Change Log
 
+## 2.2.0 — September 17, 2024
+- Pick up `generate-github-markdown-css` 6.5.0. Thanks @jjspace!
+- Fix issue with line indicator color. Thanks @jjspace!
+ 
 ## 2.1.0 — September 17, 2024
 - Pick up `generate-github-markdown-css` 6.3.0. Thanks @jjspace!
 
