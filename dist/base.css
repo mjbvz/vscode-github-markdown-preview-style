@@ -5,9 +5,33 @@ body,
     max-width: auto !important;
 }
 
+/*
+ * Override VS Code's --vscode-* theme variables within the GitHub preview
+ * scope so the dark editor theme doesn't bleed into the light preview.
+ * See: https://github.com/mjbvz/vscode-github-markdown-preview-style/issues/48
+ */
 .github-markdown-body {
-    background-color: var(--bgColor-default);
-    color: var(--fgColor-default);
+    --vscode-editor-foreground: var(--fgColor-default);
+    --vscode-foreground: var(--fgColor-default);
+    --vscode-textCodeBlock-background: var(--bgColor-muted);
+    --vscode-widget-border: var(--borderColor-default);
+    --vscode-editor-font-family: var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
+
+    background-color: var(--bgColor-default) !important;
+    color: var(--fgColor-default) !important;
+}
+
+.github-markdown-body h1,
+.github-markdown-body h2,
+.github-markdown-body h3,
+.github-markdown-body h4,
+.github-markdown-body h5,
+.github-markdown-body h6 {
+    color: var(--fgColor-default) !important;
+}
+
+.github-markdown-body a {
+    color: var(--fgColor-accent) !important;
 }
 
 .github-markdown-body {
@@ -38,23 +62,28 @@ body,
 
 .github-markdown-body blockquote {
     background-color: initial;
+    border-left-color: var(--borderColor-default) !important;
+    color: var(--fgColor-muted) !important;
 }
 
 .github-markdown-body pre {
-    color: initial;
-    border: none;
+    color: var(--fgColor-default) !important;
+    background-color: var(--bgColor-muted) !important;
+    border: 1px solid var(--borderColor-default) !important;
 }
 
 .github-markdown-body code {
-    color: inherit;
+    color: inherit !important;
+    background-color: var(--bgColor-neutral-muted) !important;
 }
 
 .github-markdown-body pre code {
-    color: initial;
+    color: var(--fgColor-default) !important;
+    background-color: transparent !important;
 }
 
 .github-markdown-body code > div {
-    background: none
+    background: none !important;
 }
 
 .github-markdown-body.showEditorSelection .code-line .code-line:hover:before {
@@ -70,6 +99,16 @@ body,
 .github-markdown-body pre {
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+.github-markdown-body hr {
+    background-color: var(--borderColor-muted) !important;
+    border: 0 !important;
+}
+
+.github-markdown-body table th,
+.github-markdown-body table td {
+    border-color: var(--borderColor-default) !important;
 }
 
 :is(.vscode-dark, .vscode-light).showEditorSelection .code-active-line:before {
