@@ -22,11 +22,14 @@ async function saveStyles(filename, content) {
  * @param {string} themeName
  */
 async function generateStyles(themeName) {
-    const varStylesheet = await githubMarkdownCss({
+    const varStylesheet = (await githubMarkdownCss({
         light: themeName,
         dark: themeName,
         onlyVariables: true,
-    });
+    }))
+        // Theme-independent tokens (--base-size-*, fonts) come out on a bare
+        // `.markdown-body` rule, but the preview wrapper is `.github-markdown-body`
+        .replace(/^(\s*)\.markdown-body(\s*\{)/m, '$1.github-markdown-body$2');
 
     // base styles for "single" light/dark mode and "auto" editor mode
     const themeRuleStylesheet = varStylesheet.replace(
